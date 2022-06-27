@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220626 18:22:29.635" rpa="false" schemaversion="3">
+<suite id="s1" name="Homepage" source="C:\Users\Wahyu Nugraha\Documents\automationpractice\Homepage.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${base_url}</arg>
+<arg>${Browser_type}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220626 18:22:29.879" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/'.</msg>
+<status status="PASS" starttime="20220626 18:22:29.878" endtime="20220626 18:22:47.994"/>
+</kw>
+<test id="s1-t1" name="I Open Homepage" line="12">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220626 18:22:47.997" endtime="20220626 18:22:48.218"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220626 18:22:50.296" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220626 18:22:48.290" endtime="20220626 18:22:50.296"/>
+</kw>
+<status status="PASS" starttime="20220626 18:22:47.995" endtime="20220626 18:22:50.297"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220626 18:22:50.300" endtime="20220626 18:22:52.736"/>
+</kw>
+<status status="PASS" starttime="20220626 18:22:29.636" endtime="20220626 18:22:52.737"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Homepage">Homepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
