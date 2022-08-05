@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220805 13:13:54.321" rpa="false" schemaversion="3">
+<suite id="s1" name="Contact" source="D:\Automation\website\automationpractice\suites\contact.robot">
+<kw name="Open Browser Chrome" library="Base" type="SETUP">
+<kw name="Open Browser">
+<arg>browser=Chrome</arg>
+<arg>url=${Base_url}</arg>
+<msg timestamp="20220805 13:13:54.354" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354"/>
+</kw>
+<status status="FAIL" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354"/>
+</kw>
+<test id="s1-t1" name="User Should Be Able To See Account" line="12">
+<doc>Test to verify that User Should Be Able To See Account</doc>
+<status status="FAIL" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354">Parent suite setup failed:
+No keyword with name 'Open Browser' found.</status>
+</test>
+<kw name="Close Browser" type="TEARDOWN">
+<msg timestamp="20220805 13:13:54.354" level="FAIL">No keyword with name 'Close Browser' found.</msg>
+<status status="FAIL" starttime="20220805 13:13:54.354" endtime="20220805 13:13:54.354">No keyword with name 'Close Browser' found.</status>
+</kw>
+<doc>Account testcase</doc>
+<status status="FAIL" starttime="20220805 13:13:54.322" endtime="20220805 13:13:54.354">Suite setup failed:
+No keyword with name 'Open Browser' found.
+
+Also suite teardown failed:
+No keyword with name 'Close Browser' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Contact">Contact</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

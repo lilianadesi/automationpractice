@@ -2,16 +2,14 @@
 Documentation       Homepage testcase
 Library             SeleniumLibrary
 Resource            ../Pageobject/Homepage.robot
+Suite Setup         Open Url Homepage
+Suite Teardown      Close Browser
  
 
 *** Test Cases ***
 User Should Be Able To See Homepage
-    [Documentation]         Test to verify that User Should Be Able To See Homepage
-    [Setup]                    Open Browser Chrome
+    Verity Current Url is Homepage Url
+    Verity Homepage Logo
 
-     Verity Current Url is Homepage Url
-     Verity Homepage Logo
-
-     [Teardown]                 Close Browser
 
 

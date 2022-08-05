@@ -1,30 +1,28 @@
 *** Settings ***
 Documentation       Login keywords
 Variables           ../Resources/locators.yaml
-
-*** Variables ***
-${Homepage_url}     http://automationpractice.com/
-${email}            budibudi@gmail.com
-${password}         12345678
+Variables           ../Resources/Variable.py
 
 
 *** Keywords ***
-Open Browser Chrome
-    Open Browser            browser=Chrome      url=${Homepage_url}
-    Maximize Browser Window
-
-User click button sigin
-    Click Element               ${sigin}     
-
 User Input Email
-    Input Text                  ${email_login}          ${email}
+    [Arguments]                 ${user_email}
+    Input Text                  ${email_login}          ${user_email}
 
 User Input Password
-    Input Password              ${password_login}       ${password}
+    [Arguments]                 ${user_password}
+    Input Password              ${password_login}       ${user_password}
     
 User click button sigin
     Click button                ${button_login}
 
+User should be able to login with valid data
+    [Arguments]                  ${user_email}      ${user_password}
+    User Input Email             ${user_email}
+    User Input Password          ${user_password}    
+    User click button sigin                
+
+
 Verity name account
+    Wait Until Element Is Visible   ${name_account}
     Element Should Be Visible   ${name_account}
-    Sleep   2s

@@ -1,49 +1,18 @@
 *** Settings ***
 Documentation       Register keywords
 Variables           ../Resources/locators.yaml
-
-*** Variables ***
-${Homepage_url}     http://automationpractice.com/
-${email}            budibudi@gmail.com
-${password}         12345678
-${firstname}        budi
-${lastname}         putra
-${date}             2
-${month}            12
-${year}             10
-${company}          dojobox
-${mobilephone}      0123456789
-${homephone}        0987654321
-${address1}         jl 123 kecebong
-${address2}         terbang
-${city}             jakarta
-${state}            5
-${zip}              12345
-${country}          1
-${additional}       ujicoba
-${Assign}           aaaaa
+Variables           ../Resources/Variable.py
 
 *** Keywords ***
-Open Browser Chrome
-    Open Browser            browser=Chrome      url=${Homepage_url}
-    Maximize Browser Window
-
-User click button sigin
-    [Documentation]         User click button sigin
-    Click Element               ${sigin}               
-
-User Input Email
+User Register with valid email
     [Documentation]         User Input Email
     Input Text                  ${email_registrasi}            ${email} 
-
-User clik button Register
-    [Documentation]         User clik button Register
     Click Button                ${create_registrasi}
 
 User click element gender
     [Documentation]         User click element gender
-    Sleep                   10s
-    Click Element               ${gender}
+    Wait Until Element Is Visible       ${gender}       timeout=5
+    Click Element                       ${gender}
 
 User Input Fristname
     [Documentation]         User Input Fristname
@@ -53,7 +22,7 @@ User Input Lastname
     [Documentation]         User Input Lastname
     Input Text                  ${lastname1}                    ${lastname} 
 
-User Input Password
+User Input New Password
     [Documentation]         User Input Password
     Input Password              ${create_password}              ${password}
 
@@ -124,4 +93,3 @@ User Input Assign an address alias
 User Click button Register
     [Documentation]         User Click button Register
     Click Button                ${register}
-    Sleep       2s
